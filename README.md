@@ -12,3 +12,16 @@ for output only good proxies:
 ```bash
 $ ./getFreeProxy.sh | awk '/good/ {print $1}'
 ```
+
+## 💥 NEW: Telegram Mtproto proxy
+This script get's Mtproto proxies from [this](https://github.com/hookzof/socks5_list) repo and outputs in Telegram proxy format
+
+### Usage
+```bash
+$ ./getMtprotoProxy.sh
+```
+proxies sorted by ping so for example to get top 5 proxies with lowest ping:
+ 
+ ```bash
+$ ./getMtprotoProxy.sh | head -n5
+```
