@@ -23,18 +23,8 @@ fi
 # END OF CHECK CURL IF EXIST #
 
 function GetFreeProxys() {
-  curl -s 'https://raw.githubusercontent.com/a2u/free-proxy-list/master/free-proxy-list.txt' && \
-  curl -s 'https://raw.githubusercontent.com/opsxcq/proxy-list/master/list.txt' && \
-  curl -s 'https://raw.githubusercontent.com/dxxzst/free-proxy-list/master/README.md' | \
-    awk 'BEGIN{
-        NR>13;
-        RS="\n";
-        FS="|"
-        }{
-          if (NF > 2) {
-            printf "%s:%s\n", $2, $3
-          }
-        }' && \
+  curl -s 'https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt' && \
+  curl -s 'https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt' && \
   curl -s 'https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list' 2>&1 | \
   tr '\n' ',' | \
   ( read -r badJson; echo "[${badJson:0:-1}]" ) | \
