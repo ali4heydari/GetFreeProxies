@@ -25,3 +25,16 @@ proxies sorted by ping so for example to get top 5 proxies with lowest ping:
  ```bash
 $ ./getMtprotoProxy.sh | head -n5
 ```
+
+## 💥 NEW: GUI 
+In order to use the proxy on desktop, the GUI generates QR codes which can be used to scan on other devices.
+
+### Install
+```bash
+$ pip install -r requirements.txt
+```
+
+### usage
+ ```bash
+$ python gui.py
+```
